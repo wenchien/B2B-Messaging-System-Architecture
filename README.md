@@ -41,7 +41,6 @@ By utilizing such design, the frontend (i.e. enterprise portal) can easily be mi
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ## Built With
 
 * ![Java Versions][java-version]
@@ -88,13 +87,12 @@ This system aims to solve:
   <em>Improved file processing (data population from static files)</em>
 </p>
 
-### Main B2B System:
 <p align="center">
   <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/DynamicDataSource.png" width="75%">
 </p>
-
-
-
+<p align="center">
+  <em>Improved dynamic data source population (connecting to database...etc.)</em>
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,8 +101,7 @@ This system aims to solve:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Version 1.0.0 code clean-ups
-
+- [ ] Version 1.0.0 release
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
