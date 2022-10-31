@@ -75,7 +75,8 @@ This system aims to solve:
 5. Maintenance of LOGS -> the original system has logs everywhere / under applications' log folders (Tomcat, Kafka, Airflow, ETL tools...etc). An implementation of LogStash + ElasticSearch should resolve this issue and hopefully reduce maintenance cost.
 6. EDI / X12 Message processing time
 7. Message monitoring
-8. And many many more...
+8. System component can be moved easily -> many components can then be moved to internal docker containers or cloud services (AWS..etc.)
+9. And many many more...
 
 </br>
 
