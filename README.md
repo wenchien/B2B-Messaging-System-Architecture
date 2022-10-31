@@ -70,7 +70,10 @@ Each sub-module utilizes `chain of responsibility` design pattern. It is done th
 This system aims to solve:
 1. Single service / monolithic service deployment -> since we constantly receive messages sent from our trading partners / customers, there's no reason code re-deployment / features changes should cause disturbance in message processing.
 2. Features deployment time -> resolves similar to the issue mentioned in #1 thanks to kafka's partitioning feature.
-3. 
+3. Long inheritance list from `template` pattern -> the original system's class inheritance list is way too long that utlimately creates a tightly coupled relationship. Any additional feature that wish to be added will generally result in some form of modification and in `SOLID` design principle, it is not wise.
+4. Message validation -> the new system allows custom validation done at various event stages. I've also wrote a small library that goes well with this design. See [StringFirewall](https://github.com/wenchien/StringFireWall)
+5. Maintenance of LOGS -> the original system has logs everywhere / under applications' log folders (Tomcat, Kafka, Airflow, ETL tools...etc). An implementation of LogStash + ElasticSearch should resolve this issue and hopefully reduce maintenance cost.
+6. And many many more...
 
 </br>
 
