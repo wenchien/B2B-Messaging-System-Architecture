@@ -19,7 +19,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#System design diagram">Usage</a></li>
+    <li><a href="#system-diagram">System Diagram</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -57,9 +57,7 @@ By utilizing such design, the frontend (i.e. enterprise portal) can easily be mi
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- USAGE EXAMPLES -->
-## System design diagram
+## System Diagram
 <p align="center">
   <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/SystemDiagram.png" width="75%">
 </p><p align="center">
