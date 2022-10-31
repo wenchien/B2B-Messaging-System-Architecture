@@ -73,7 +73,9 @@ This system aims to solve:
 3. Long inheritance list from `template` pattern -> the original system's class inheritance list is way too long that utlimately creates a tightly coupled relationship. Any additional feature that wish to be added will generally result in some form of modification and in `SOLID` design principle, it is not wise.
 4. Message validation -> the new system allows custom validation done at various event stages. I've also wrote a small library that goes well with this design. See [StringFirewall](https://github.com/wenchien/StringFireWall)
 5. Maintenance of LOGS -> the original system has logs everywhere / under applications' log folders (Tomcat, Kafka, Airflow, ETL tools...etc). An implementation of LogStash + ElasticSearch should resolve this issue and hopefully reduce maintenance cost.
-6. And many many more...
+6. EDI / X12 Message processing time
+7. Message monitoring
+8. And many many more...
 
 </br>
 
