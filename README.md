@@ -108,7 +108,7 @@ Each sub-module utilizes `chain of responsibility` design pattern. It is done th
   <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/DynamicDataSource.png" width="75%">
 </p>
 <p align="center">
-  <em>Improved dynamic data source population (connecting to database...etc.)</em>
+  <em>Improved dynamic data source population (connecting to / getting data from database / REST API...etc.)</em>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
