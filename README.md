@@ -19,13 +19,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -37,47 +30,72 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<p align="center">
-  <img src="https://github.com/wenchien/ExcelToPDFForms-Editor/blob/master/images/logo.png">
-</p>
 
-Instead of writing static mapping POJOs / beans / configurations and re-compile again and again for users' constant needs, why don't we let the users handle it? This is a GUI tool that aims to let users easily create input-output mappings between Excel field and PDF field. Given an Excel with a header and a pdf with defined fields(textfields or textbox...etc.), this tool will generate configuration file as JSON, read that configuration file and automatically run the data conversion if scheduled.
+The project aims to migrate monolithic B2B messaging system to a new and more modern system that utizilies Spring Boot, Docker, Microservices and Monitoring (logstash and ElasticSearch) that will resolve a lot of the maintenance costs / time that backend developers need to spend.
+
+Do note this is a barebone / prototype / proof of concept. There will be flaws / ideas that haven't been considered / evaluated thoroughly but it's generally better to have something down (something is better than nothing afterall).
+
+By utilizing such design, the frontend (i.e. enterprise portal) can easily be migrated to newer technology (React, AngularJS). It should speed up development time comparing to a direct client-to-microservice communication architecture. 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
+## Built With
 
 * ![Java Versions][java-version]
-* ![JavaFx][javafx-version]
-* ![iText][itext-version]
+* ![Maven][maven-version]
+* ![Kafka][kafka-version]
+* ![JUnit][junit-version]
+* ![Log4j2][log4j2-version]
+* ![LogStash][logstash-version]
+* ![Kibana][kibana-version]
+* ![ElasticSearch][elasticsearch-version]
 * See the ![pom.xml](https://github.com/wenchien/ExcelToPDFForms-Editor/blob/master/pom.xml) for all relevant dependencies
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get started, download the .zip file from the release page
-* ![Latest Release]()
-
-### Prerequisites
-
-* Make sure Java version 8+ is installed on your system
-
-### Installation
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- USAGE EXAMPLES -->
-## Usage
+## System design diagram
+<p align="center">
+  <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/SystemDiagram.png" width="75%">
+</p><p align="center">
+  <em>Main B2B System</em>
+</p>
+
+
+### Sub-modules / Microservices:
+
+<p align="center">
+  <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/Marshalling.png" width="75%">
+</p>
+<p align="center">
+  <em>Improved message marshalling / unmarshalling process</em>
+</p>
+Each sub-module utilizes `chain of responsibility` design pattern. It is done this way to ensure better code readability and scalability. In addition, each sub-module will implement `event validation` to ensure consistencies.
+
+This system aims to solve:
+1. Single service / monolithic service deployment -> since we constantly receive messages sent from our trading partners / customers, there's no reason code re-deployment / features changes should cause disturbance in message processing.
+2. Features deployment time -> resolves similar to the issue mentioned in #1 thanks to kafka's partitioning feature.
+3. 
+
+
+<p align="center">
+  <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/Fileprocessing.png" width="75%">
+</p>
+<p align="center">
+  <em>Improved file processing (data population from static files)</em>
+</p>
+
+### Main B2B System:
+<p align="center">
+  <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/SystemDiagram.png" width="75%">
+</p>
+
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
