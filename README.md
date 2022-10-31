@@ -65,8 +65,6 @@ By utilizing such design, the frontend (i.e. enterprise portal) can easily be mi
 </br>
 </br>
 
-Each sub-module utilizes `chain of responsibility` design pattern. It is done this way to ensure better code readability and scalability. In addition, each sub-module will implement `event validation` to ensure consistencies.
-
 This system aims to solve:
 1. Single service / monolithic service deployment -> since we constantly receive messages sent from our trading partners / customers, there's no reason code re-deployment / features changes should cause disturbance in message processing.
 2. Features deployment time -> resolves similar to the issue mentioned in #1 thanks to kafka's partitioning feature.
@@ -81,6 +79,10 @@ This system aims to solve:
 </br>
 
 ### Sub-modules / Microservices:
+
+Each sub-module utilizes `chain of responsibility` design pattern. It is done this way to ensure better code readability and scalability. In addition, each sub-module will implement `event validation` to ensure consistencies.
+
+</br>
 
 <p align="center">
   <img src="https://github.com/wenchien/B2B-Messaging-System-Architecture/blob/master/images/Marshalling.png" width="75%">
